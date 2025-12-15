@@ -42,22 +42,22 @@ def max_index(X):
 
     # TODO
 
-    #Debut - Yasmine
+    # Debut - Yasmine
     # Input : numpy array
     if not isinstance(X, np.ndarray):
         raise ValueError("Input must be a numpy array")
-    #Input : Shape 2D
-    if not(X.ndim==2):
+    # Input : Shape 2D
+    if not( X.ndim == 2 ):
         raise ValueError("Input shape must be 2D")
-    #Max
-    m=X[0,0]
-    for a in range(X.shape[0]):
-        for b in range(X.shape[1]):
-            if X[a,b]>m:
-                m=X[a,b]
-                i=a
-                j=b
-    #Fin - Yasmine
+    # Max
+    m = X[0, 0]
+    for a in range( X.shape[0] ):
+        for b in range( X.shape[1] ):
+            if X[a, b] > m:
+                m = X[a,b]
+                i = a
+                j = b
+    # Fin - Yasmine
 
     return i, j
 
@@ -81,14 +81,13 @@ def wallis_product(n_terms):
     """
     # XXX : The n_terms is an int that corresponds to the number of
     # terms in the product. For example 10000.
-    #return 0.
+    # return 0.
 
-    #Debut - Yasmine
-    resultat=1.0
-    if n_terms==0:
-        return 2*resultat
+    # Debut - Yasmine
+    resultat = 1.0
+    if n_terms == 0:
+        return 2 * resultat
     else :
-        for i in range (1,n_terms+1):
-            resultat *=(4*(i**2))/(4*(i**2)-1)
-    return 2*resultat
-
+        for i in range ( 1, n_terms+1 ):
+            resultat *= (4 * (i**2)) / (4 * (i**2) - 1)
+    return 2 * resultat
