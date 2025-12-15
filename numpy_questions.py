@@ -42,6 +42,23 @@ def max_index(X):
 
     # TODO
 
+    #Debut - Yasmine
+    # Input : numpy array
+    if not isinstance(X, np.ndarray):
+        raise ValueError("Input must be a numpy array")
+    #Input : Shape 2D
+    if not(X.ndim==2):
+        raise ValueError("Input shape must be 2D")
+    #Max
+    m=X[0,0]
+    for a in range(2):
+        for b in range(2):
+            if X[a,b]>m:
+                m=X[a,b]
+                i=a
+                j=b
+    #Fin - Yasmine
+    
     return i, j
 
 
